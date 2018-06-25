@@ -8,8 +8,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileNotificationReader {
+public class FileNotificationReader implements Reader {
 
+    @Override
     public List<Notification> getNotifications() throws IOException {
         List<String> lines = Files.readAllLines(Paths.get("notifications.csv"));
         List<Notification> notifications = new ArrayList<>();
