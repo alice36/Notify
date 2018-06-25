@@ -23,7 +23,7 @@ public class NotificationFacade {
         List<Notification> notifications = reader.getNotifications();
         for (Notification notification : notifications) {
             sender.sendNotification(notification);
-            logger.logFile("Wysłano wiadomość do " + notification.getEmail());
+            logger.log("Wysłano wiadomość do " + notification.getEmail());
         }
     }
 

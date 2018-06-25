@@ -1,6 +1,7 @@
 package pl.notify.app;
 
 import pl.notify.logger.ConsoleNotificationLogger;
+import pl.notify.logger.FileNotificationLogger;
 import pl.notify.reader.FileNotificationReader;
 import pl.notify.sender.EmailNotificationSender;
 
@@ -11,7 +12,7 @@ public class NotificationSystem {
 
         FileNotificationReader reader = new FileNotificationReader();
         EmailNotificationSender sender = new EmailNotificationSender();
-        ConsoleNotificationLogger logger = new ConsoleNotificationLogger();
+        FileNotificationLogger logger = new FileNotificationLogger();
 
         NotificationFacade facade = new NotificationFacade(reader,sender,logger);
 
